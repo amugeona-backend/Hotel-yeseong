@@ -1,7 +1,5 @@
 package service;
 
-import static util.UtilContext.*;
-
 public class ManagerService {
     private final HotelService hotelService;
 
@@ -11,7 +9,7 @@ public class ManagerService {
 
     public void displayManagerMode() {
         while (true) {
-            lineWithText("Manager Mode");
+            System.out.println("----------Manager Mode----------");
             System.out.println("1. 예약 현황");
             System.out.println("2. 자산 현황");
             System.out.println("9. 시스템 종료");

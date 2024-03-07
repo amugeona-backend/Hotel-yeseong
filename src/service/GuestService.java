@@ -7,12 +7,7 @@ import model.Guest;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
-
-import static util.UtilContext.backMessage;
-import static util.UtilContext.errorMessage;
-import static util.UtilContext.line;
-import static util.UtilContext.linewithText;
-import static util.Utilcontext.sc;
+import java.util.Scanner;
 
 public class GuestService {
     private final HotelService hotelService;
@@ -25,10 +20,10 @@ public class GuestService {
 
     public void displayGuestMode() {
         while (true) {
-            lineWithText("Guest Mode");
+            System.out.println("----------Guest Mode----------");
             System.out.println("1. 로그인");
             System.out.println("2. 회원 가입");
-            backMessage();
+            Scanner sc = new Scanner(System.in);
             int command = sc.nextInt();
             if (command == 0) {
                 break;
@@ -37,9 +32,12 @@ public class GuestService {
             } else if (command == 2) {
                 signUp();
             } else {
-                errorMessage();
+                System.out.println("error");
             }
         }
     }
+    private void signIn() {
+        System.out.println("JAVA 호텔 로그인");
 
+    }
 }

@@ -1,6 +1,7 @@
 package service;
 
 import constant.RoomType;
+import model.Guest;
 import model.Hotel;
 import model.ProductRoom;
 
@@ -45,5 +46,10 @@ public class HotelService {
     public List<ProductRoom> findProductRoomByDate(LocalDate date) {
         return hotel.getProductRooms().stream()
                 .filter(room->room.getReservedDate().equals(date)).toList();
+    }
+
+    public Guest findGuestByPhoneNumber(String phoneNumber) {
+        return hotel.getGuests().stream().filter(u -> u.getPhoneNumber().equals(phoneNumber))
+                .findFirst().orElse(null);
     }
 }
