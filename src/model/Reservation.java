@@ -1,5 +1,5 @@
 package model;
 
 import java.time.LocalDateTime;
-public record Reservation(String guestName, String guestPhoneNumber, ProductRoom productRoom, LocalDateTime createdAt) {
+public record Reservation(ProductRoom productRoom, String guestName, String guestPhoneNumber, LocalDateTime createdAt) {
 }

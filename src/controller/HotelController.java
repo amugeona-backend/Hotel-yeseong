@@ -48,7 +48,7 @@ public class HotelController {
                 }
             }
             default -> { // error
-                System.out.println("error");;
+                System.out.println("다시 입력하세요.");;
                 modeInputHandling();
             }
         }
