@@ -24,6 +24,7 @@ public class GuestService {
             System.out.println("----------Guest Mode----------");
             System.out.println("1. 로그인");
             System.out.println("2. 회원 가입");
+            System.out.println("0. 뒤로 가기");
             int command = sc.nextInt();
 
             if (command == 0) {
@@ -295,6 +296,7 @@ public class GuestService {
                 productRoom.getRoomNumber(),
                 productRoom.getRoomType(),
                 reservation.createdAt().toString());
+
         System.out.println();
         System.out.println("정말 취소하시겠습니까?");
         System.out.println("1. 예약 취소     2. 뒤로 가기");

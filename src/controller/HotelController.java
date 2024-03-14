@@ -25,12 +25,12 @@ public class HotelController {
         modeInputHandling();
     }
 
+    Scanner sc = new Scanner(System.in);
     public void modeInputHandling() {
         System.out.println();
         System.out.println("Mode를 선택해주세요.");
         System.out.println("1. Guest Mode");
         System.out.println("2. Manager Mode");
-        Scanner sc = new Scanner(System.in);
         int command = sc.nextInt();
 
         switch (command) {
@@ -56,8 +56,7 @@ public class HotelController {
 
     public boolean passwordCheck() { // 비밀번호 확인
         System.out.println("관리자 비밀번호를 입력해주세요 : ");
-        Scanner sc = new Scanner(System.in);
-        int cmd = sc.nextInt();
+        int command = sc.nextInt();
         try {
             return encryption(String.valueOf(sc.nextInt())).equals(hotelService.getHotelPassword());
         } catch (Exception e) {
